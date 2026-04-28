@@ -2,17 +2,43 @@ from pydantic import BaseModel
 from typing import Optional
 
 
-# Модель для регистрации/логина
+# Модель для авторизации
 class UserAuth(BaseModel):
     email: str
     password: str
 
 
-# Модель ответа при регистрации/логине
-class AuthResponse(BaseModel):
+# Модель для регистрации
+class RegistrationUser(BaseModel):
+    email: str
+    password: str
+    submitPassword: str
+
+
+# Модель ответа на запрос авторизации
+class ResponseUser(BaseModel):
+    id: int
+    name: str
+    email: str
+    avatar: Optional[str] = None
+    admin: Optional[bool] = None
+
+
+# Общаяодель токена
+class TokenData(BaseModel):
     access_token: str
-    refreshToken: Optional[str] = None
-    user: Optional[dict] = None
+
+
+# Модель ответа на запрос регистрации
+class RegistrationResponse(BaseModel):
+    user: ResponseUser
+    access_token: TokenData
+
+
+# Модель ответа на запрос авторизации
+class AuthResponse(BaseModel):
+    user: ResponseUser
+    token: TokenData
 
 
 # Модель для создания объявления
@@ -44,7 +70,7 @@ class CreateOfferResponse(BaseModel):
     createdAt: str
     updatedAt: str
     isFavorite: Optional[str] = None
-  
+
 
 # Модель для редактирвоания объявления
 class UpdateOfferRequest(BaseModel):

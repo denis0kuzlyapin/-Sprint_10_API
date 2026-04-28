@@ -24,7 +24,7 @@ class GenDataForUser:
         # генерируем логин, пароль и имя пользователя
         email = f"test_{GenDataForUser.email_fake()}"
         password = f"test_{GenDataForUser.generate_random_string(10)}"
-        name = f"test{GenDataForUser.generate_random_string(10)}"
+        submitPassword = password
 
         # собираем тело запроса
-        return {"email": email, "password": password, "name": name}
+        return {"email": email, "password": password, "submitPassword": submitPassword}
