@@ -1,6 +1,6 @@
 class Url:
 
-    BASE_URL = "https://qa-desk.stand.praktikum-services.ru"
+    BASE_URL = "https://qa-desk.education-services.ru"
 
 
 class Endpoint:

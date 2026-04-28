@@ -1,7 +1,6 @@
 import allure
 
 from api import User
-from constants import Url
 from models import RegistrationResponse, RegistrationUser
 
 
@@ -42,9 +41,11 @@ class TestNegativeUserRegistration:
 
         with allure.step("Отправить повторный запрос на регистрацию с тем же email"):
             response = User.create_user(payload.model_dump())
+            error_data = response.json()
 
         with allure.step("Проверить, что сервер вернул ошибку"):
             assert response.status_code == 400
 
         with allure.step("Проверить, что в ответе есть текст ошибки"):
-            assert response.text == "Почта уже используется"
+            assert error_data["statusCode"] == 400
+            assert error_data["message"] == "Почта уже используется"

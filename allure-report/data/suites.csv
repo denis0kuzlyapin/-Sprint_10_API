@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1","Успешная регистрация уникального пользователя","tests","Wed Apr 29 02:57:06 MSK 2026","passed","Wed Apr 29 02:57:06 MSK 2026","TestPositiveUserRegistration","test_user_registration","",""
+"","764","Успешная авторизация ранее зарегистрированного пользователя","tests","Wed Apr 29 02:56:57 MSK 2026","passed","Wed Apr 29 02:56:58 MSK 2026","TestPositiveUserAuthorization","test_auth","",""
+"","1236","Успешное удаление объявления","tests","Wed Apr 29 02:57:01 MSK 2026","passed","Wed Apr 29 02:57:02 MSK 2026","TestPositiveCreateOffer","test_offer","",""
+"","1903","Ошибка при редактировании чужого объявления","tests","Wed Apr 29 02:57:03 MSK 2026","passed","Wed Apr 29 02:57:05 MSK 2026","TestNegativeEditOffer","test_offer","",""
+"","640","Ошибка при повторной регистрации пользователя","tests","Wed Apr 29 02:57:07 MSK 2026","passed","Wed Apr 29 02:57:08 MSK 2026","TestNegativeUserRegistration","test_user_registration","",""
+"","692","Успешное создание объявления","tests","Wed Apr 29 02:56:59 MSK 2026","passed","Wed Apr 29 02:56:59 MSK 2026","TestPositiveCreateOffer","test_offer","",""

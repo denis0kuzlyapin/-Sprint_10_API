@@ -19,7 +19,7 @@ class TestPositiveUserAuthorization:
             auth_data = AuthResponse(**response.json())
 
         with allure.step("Проверить статус-код ответа"):
-            assert response.status_code == 200
+            assert response.status_code == 201
 
         with allure.step("Проверить email авторизованного пользователя"):
             assert auth_data.user.email == Data.EMAIL

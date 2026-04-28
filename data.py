@@ -1,3 +1,4 @@
+# Условная БД
 class Data:
 
     EMAIL = "userjjj345@mail.ru"

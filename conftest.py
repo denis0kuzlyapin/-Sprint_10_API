@@ -26,7 +26,7 @@ def auth_token():
 
     login_response = User.login(login_payload.model_dump())
 
-    if login_response.status_code != 200:
+    if login_response.status_code != 201:
         raise AssertionError(
             f"Не удалось получить токен. Статус: {login_response.status_code}, тело: {login_response.text}"
         )
